@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organize Tasks</title>
+  <link rel="stylesheet" href="{% static 'tasks/css/styles.css' %}">
+  <link id="source" rel="stylesheet" href="{% static 'tasks/css/lightmode.css' %}">
+  <script src="{% static "tasks/js/darkmode.js" %}"></script>
+
+</head>
+
+<body>
+  
+	<div class="grid-container">
+		<div class="header">
+			<div class="page-title">Organize your Tasks</div>
+			<input type="button" id="changemode" value="Dark Mode" 
+			data-lightmode="{% static "tasks/css/lightmode.css" %}"
+			data-darkmode="{% static "tasks/css/darkmode.css" %}">
+		</div>
+
+		<div class="section">
+			<ul>
+				<li><a href="{% url 'tasks:index' %}">View your tasks</a></li>
+				<li><a href="{% url 'tasks:add'  %}">Add new task</a></li>
+			</ul>
+		</div>
+
+		<div class="main">
+	  	{% block body %}
+  		{% endblock body %}
+		</div>
+	</div>
+
+</body>
+
+</html>

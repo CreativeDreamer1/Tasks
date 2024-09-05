@@ -1,0 +1,23 @@
+{% extends "tasks/layout.html" %}
+
+{% block body %}
+
+  <h1>Your tasks</h1>
+    
+  <ul>
+    {% for task, dsc in n %}
+      <li>
+        <div class="card">
+          <div class="task-title">{{ task }}</div>
+          <p>{{ dsc }}</p>
+          <form action="{% url 'tasks:delete' forloop.counter0 %}" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Delete">
+          </form>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+
+{% endblock body %}
+

@@ -1,0 +1,66 @@
+* {
+  font-family: arial;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 250px auto;
+	grid-template-rows: 100px auto;
+	height: 100vh;
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 60px;
+	grid-column: 1 / 3;
+	grid-row: 1;
+}
+
+.section {
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.main {
+	grid-column: 2;
+	grid-row: 2;
+	padding-left: 20px;
+}
+
+.section ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.section ul li {
+	margin: 5px;
+	padding: 10px;
+}
+
+.section ul li a {
+	text-decoration: none;
+}
+
+.card {
+	width: 75%;
+	padding: 20px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+
+.card .task-title {
+	font-size: x-large;
+}
+
+#changemode {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+}
