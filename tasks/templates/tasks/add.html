@@ -4,9 +4,12 @@
 
   <h1>Add a new task</h1>
 
-  <form method="post">
+  <form method="post" class="card" style="width: 70vh;">
 		{% csrf_token %}
-		{{ form }}
+		<div class="new-task-title">Task title:</div>
+		{{ form.task }}
+		<div class="new-task-desc">Task Description:</div>
+		{{ form.description }} 
 		<button type="submit">Submit</button>
 	</form>
 
