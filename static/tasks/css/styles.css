@@ -1,66 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
-  font-family: arial;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
-.grid-container {
-	display: grid;
-	grid-template-columns: 250px auto;
-	grid-template-rows: 100px auto;
-	height: 100vh;
+body {
+	background-color: #f2f2f2;
 }
 
 .header {
+	height: 100px;
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	font-size: 60px;
-	grid-column: 1 / 3;
-	grid-row: 1;
+	justify-content: space-around;
+	border-bottom: 5px solid #c6c6c6;
+	box-shadow: 0 5px 8px #e8e8e8;
 }
 
-.section {
-	grid-column: 1;
-	grid-row: 2;
+.options {
+	display: flex;
+  align-items: center;
+	gap: 100px;
+}
+
+.options ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	gap: 30px;
+}
+
+.options ul a {
+  position: relative;
+	text-decoration: none;
+	color: #474747;
+	transition: 0.2s ease;
+}
+
+.options ul a:hover {
+  color: #1a1a1a;
+}
+
+.page-title {
+	font-size: 30px;
+	font-weight: 600;
+	color: #474747;
 }
 
 .main {
-	grid-column: 2;
-	grid-row: 2;
-	padding-left: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 10px;
 }
 
-.section ul {
-	list-style-type: none;
+.main h1 {
+	font-weight: 500;
+}
+
+.main ul {
 	padding: 0;
-	margin: 0;
-}
-
-.section ul li {
-	margin: 5px;
-	padding: 10px;
-}
-
-.section ul li a {
-	text-decoration: none;
+  margin: 0;
+  list-style: none;
+  display: flex;
+	flex-direction: column;
+  gap: 20px;
 }
 
 .card {
-	width: 75%;
-	padding: 20px;
-	margin-bottom: 10px;
-	border-radius: 10px;
+	background-color: #e8e8e8;
+	border: 4px solid #c6c6c6;
+	width: 85vh;
+  padding: 20px;
+  border-radius: 7px;
+  box-shadow: 0 5px 8px #dcdcdc;
 }
 
 .card .task-title {
-	font-size: x-large;
+  font-size: 20px;
+  font-weight: 600;
 }
 
-#changemode {
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+}
+
+#id_task {
+	padding: 5px;
+}
+
+#id_description {
+	padding: 5px;
+  height: 100px;
 }
