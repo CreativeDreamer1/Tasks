@@ -12,7 +12,7 @@
           <p>{{ dsc }}</p>
           <form action="{% url 'tasks:delete' forloop.counter0 %}" method="post">
             {% csrf_token %}
-            <input type="submit" value="Delete" class="delete">
+            <input type="submit" value="Delete" class="delete" data-title="{{ task }}">
           </form>
         </div>
       </li>
